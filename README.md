@@ -47,6 +47,8 @@ Stop running , run this command.
 ```sh
 $ docker-compose down
 ```
+### Tutorial
+- https://ibnuu.com/posts/mengenal-jenkins
 
 ## Inspiration and resources
 
