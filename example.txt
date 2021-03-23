@@ -1,0 +1,29 @@
+pipeline {
+    # Add Environment Path Docker-compose if you use docker
+    environment {
+        PATH = "$PATH:/usr/bin/docker-compose"
+    }
+    
+    agent any
+
+    # list command for testing or deploy step
+    stages {
+        stage('Run') {
+            steps {
+                echo 'Runningg.. \n'
+                sh "echo run command with sh tag"
+            }
+        }
+        stage('Build') {
+            steps {
+                echo 'Build... \n'
+                sh "docker-compose up -d"
+            }
+        }
+        stage('Deployed') {
+            steps {
+                echo 'Successs... \n'
+            }
+        }
+    }
+}
